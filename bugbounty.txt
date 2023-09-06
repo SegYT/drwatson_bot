@@ -1,0 +1,12 @@
+Как начать в Баг Баунти:
+
+1\. Изучить HTML, CSS и основы WEB \(Protocols, requests, callbacks, etc\)
+2\. Javascript
+3\. Python
+4\. Основы Bug Bounty
+5\. Клиентские техники тестирования \(XSS, CSRF, CSTI, CSS Injection, CORS, Websockets hijacking, Clickjacking, Localstorage, etc\)
+6\. Продвинутые бакенд техники тестирования \(SSRF, SSTI, SQLi, IDOR, Broken OAUTH, etc\)
+7\. Методы повышения импакта \(Privilege escalation, escalation to RCE, linking vulnerabilities to CVEs, etc\)
+8\. Можно еще какие нибудь языки программирования выучить \(Опционально, но поможет\)
+
+Если ты все это сделаешь и применишь на практике, и при этом не заработаешь хотя\-бы 500$, то тебе уже ничего не поможет

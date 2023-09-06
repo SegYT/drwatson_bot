@@ -1,0 +1,7 @@
+Если у тебя *Python 3\.10* или *Python 3\.11*, то удаляй его и устанавливай [*Python 3\.9\.9*](https://www.python.org/downloads/release/python-399/)
+
+Далее открываешь консоль и пишешь `pip install aiogram requests logging`
+
+Если не помогло, то вероятнее всего, ты не купил доступ к API:
+
+https://rapidapi\.com/segnayt\-e1RorVbq3qe/api/dimondevosint/
