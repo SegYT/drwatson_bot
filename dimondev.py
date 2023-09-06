@@ -7,8 +7,7 @@ patterns = [
     [ ['начать', 'как'], ['уязвимо', 'bug', 'баг', 'bounty', 'баунти', 'баунтить', 'баги', 'пентест', 'pentest', 'пентестинг', 'pentesting'], ''.join(open('bugbounty.txt', 'r', encoding='utf-8').read())]
 ]
 
-TOKEN = '6452523862:AAH-kCNoLllFHsEQFaa_JuyHCwm9J_IR5HU'
-
+TOKEN = 'TOKEN_GOES_HERE'
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
