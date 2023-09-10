@@ -40,7 +40,6 @@ def check_banWord(msg):
         lines = f.readlines()
         for line in lines:
             banwords += line
-            print(line)
 
     banwords = banwords.replace('\n', '').replace(' ', '').split(',')
 
