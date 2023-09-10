@@ -3,13 +3,17 @@ from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 
 patterns = [
-    [ ['помо', 'не работает', 'не робит'], ['бот', 'апи', 'api', 'гб', 'глаз бога', 'глаза', 'бога'], ''.join(open('fix_api.txt', 'r', encoding='utf-8').read())],
-    [ ['начать', 'как'], ['уязвимо', 'bug', 'баг', 'bounty', 'баунти', 'баунтить', 'баги', 'пентест', 'pentest', 'пентестинг', 'pentesting'], ''.join(open('bugbounty.txt', 'r', encoding='utf-8').read())]
+    [['помо', 'не работает', 'не робит'], ['бот', 'апи', 'api', 'гб', 'глаз бога', 'глаза', 'бога'],
+     ''.join(open('fix_api.txt', 'r', encoding='utf-8').read())],
+    [['начать', 'как'],
+     ['уязвимо', 'bug', 'баг', 'bounty', 'баунти', 'баунтить', 'баги', 'пентест', 'pentest', 'пентестинг',
+      'pentesting'], ''.join(open('bugbounty.txt', 'r', encoding='utf-8').read())]
 ]
 
-TOKEN = 'TOKEN_GOES_HERE'
+TOKEN = '6467755508:AAFn_dqQso0SZLsusfw9S1LGignJzRwORSg'
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
+
 
 @dp.message_handler()
 async def chat_message(msg: types.Message):
@@ -29,19 +33,25 @@ async def chat_message(msg: types.Message):
         await msg.reply(f'Без мата {msg.from_user.mention}, больше не повторяю.')
         await bot.delete_message(msg.chat.id, message_id=msg.message_id)
 
+
 def check_banWord(msg):
-    banwords = ''
+    banwords = ' '
     with open('block_words.txt', 'r', encoding='utf-8') as f:
         lines = f.readlines()
         for line in lines:
             banwords += line
+            print(line)
 
     banwords = banwords.replace('\n', '').replace(' ', '').split(',')
-    
+
     for banword in banwords:
-        if banword.lower() in msg.lower():
+        a = msg.split(' ')
+        if a[0].lower() == banword:
             return True
-    
+        elif ' ' + banword in msg:
+            return True
+
     return False
+
 
 executor.start_polling(dp)
