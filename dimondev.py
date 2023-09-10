@@ -10,7 +10,7 @@ patterns = [
       'pentesting'], ''.join(open('bugbounty.txt', 'r', encoding='utf-8').read())]
 ]
 
-TOKEN = '6467755508:AAFn_dqQso0SZLsusfw9S1LGignJzRwORSg'
+TOKEN = ''
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
